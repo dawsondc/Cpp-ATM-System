@@ -62,8 +62,7 @@ int main()
         case 1:
             system("cls");//clear console
             cout.imbue(locale("en_US.utf8"));//csv format for numbers
-            cout << fixed;
-            cout << setprecision(2) << showpoint;
+            cout << fixed << setprecision(2) << showpoint;
             cout << "\nBalance: " << "$" << balance << endl; break;
 
         case 2:
@@ -73,17 +72,17 @@ int main()
             if (balance < withdraw)
             {
                 cout << "\nInsufficient Funds!" << endl;
-                cout << "Enter the amount you want to withdraw: ";
+                cout << "\nEnter the amount you want to withdraw: ";
                 cin >> withdraw;
             }
             balance -= withdraw; break;
 
         case 3:
             system("cls");
-            cout << "Enter the amount you want to deposit: $";
+            cout << "\nEnter the amount you want to deposit: $";
             cin >> deposit;
             balance += deposit;
-            cout << "\n"; break;
+            break;
 
         case 4:
             system("cls");
