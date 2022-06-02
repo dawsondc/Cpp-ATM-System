@@ -3,7 +3,54 @@
 #include <iomanip>
 #include <locale>
 #include <windows.h>
+
 using namespace std;
+
+void loading()
+{
+    string loadingText = ".................";
+    for (int i = 0; i < loadingText[i]; i++)
+    {
+        cout << loadingText[i];
+        Sleep(50);//printing out hello message and 200 mill seconds
+    }
+}
+
+bool login()
+{
+    string accountNums[3] = { "000001", "000002", "000003"};
+    string accountInput;
+
+    
+   do
+    {
+        cout << "\nEnter your account number: ";
+        cin >> accountInput;
+        for (int i = 0; i < size(accountNums); ++i)
+        {
+            if (accountInput == accountNums[i])
+            {
+                system("cls");
+                loading();
+                system("cls");
+                cout << "\nAccount Valid!\n" << endl;
+                system("PAUSE");
+                return 0;
+                break;
+                
+            }
+            else
+            {
+                system("cls");
+                loading();
+                system("cls");
+                cout << "\nInvalid Account Number\n";
+                break;
+            }
+        }
+   } while (1);
+}
+
 
 void showMenu()//function for menu
 {
@@ -37,10 +84,11 @@ int main()
     cout << endl << endl;
     system("PAUSE");
     system("cls");//clear console
+    login();
 
     do
     {
-
+        system("cls");
         cout << endl; //spacing from top 
         showMenu();
         cout << "Option: ";
