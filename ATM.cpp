@@ -18,7 +18,7 @@ void loading()
 
 bool login()
 {
-    string accountNums[3] = { "000001", "000002", "000003"};
+    string accountNums[] = { "000001", "000002", "000003"};
     string accountInput;
 
     
@@ -26,7 +26,7 @@ bool login()
     {
         cout << "\nEnter your account number: ";
         cin >> accountInput;
-        for (int i = 0; i < size(accountNums); ++i)
+        for (int i = 0; i < sizeof(accountNums); i++)
         {
             if (accountInput == accountNums[i])
             {
