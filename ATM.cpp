@@ -3,6 +3,9 @@
 #include <iomanip>
 #include <locale>
 #include <windows.h>
+#include <time.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 using namespace std;
 
@@ -38,16 +41,16 @@ bool login()
 			if (accountInput == accountNums[i])
 			{
 
-				
+
 				cout << "\nAccount Valid!\n" << endl;
 				system("PAUSE");
 				return 0;
 
 
 			}
-			
+
 		}
-		
+
 		cout << "\nInvalid Account Number\n";
 	}
 }
@@ -75,17 +78,25 @@ void startText()
 
 int main()
 {
+	srand(time(NULL));
+
 	//Variables
 	int option = 0;
-	long double balance = 1000.00;
+	long double balance = long double(rand() % 4000 + 100);
 	long double deposit = 0.00;
 	long  double withdraw = 0.00;
+
+
 
 	startText();
 	cout << endl << endl;
 	system("PAUSE");
 	system("cls");//clear console
 	login();
+
+	cout << fixed << setprecision(2) << showpoint;
+	cout << balance << endl;
+	system("PAUSE");
 
 	do
 	{
