@@ -94,10 +94,6 @@ int main()
 	system("cls");//clear console
 	login();
 
-	cout << fixed << setprecision(2) << showpoint;
-	cout << balance << endl;
-	system("PAUSE");
-
 	do
 	{
 		system("cls");
@@ -123,7 +119,9 @@ int main()
 			system("cls");//clear console
 			cout.imbue(locale("en_US.utf8"));//csv format for numbers
 			cout << fixed << setprecision(2) << showpoint;
-			cout << "\nBalance: " << "$" << balance << endl; break;
+			cout << "\nBalance: " << "$" << balance << endl;
+			system("PAUSE");
+			break;
 
 		case 2:
 			system("cls");
